@@ -2,7 +2,7 @@ module.exports = {
   lintOnSave: false,
 
   css: {
-    loaerOptions: {
+    loaderOptions: {
       sass: {
         additionalData: `
           @import "@/styles/functions";
