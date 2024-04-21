@@ -50,7 +50,7 @@
 			height: 100%;
 			padding: 85px 20px 20px;
 			clip-path: polygon(270px 41px, 100% 41px, 100% 100%, 0 100%, 0 75px, 200px 75px);
-			transition: all 1.5s ease-in-out;
+			transition: all 2.5s ease-in-out;
 			transform: translateY(calc(-100% - 40px)) rotateX(0deg);
 			transform-origin: left bottom;
 
