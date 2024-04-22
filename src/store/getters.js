@@ -1,13 +1,8 @@
-/* eslint-disable indent */
+import { parsePokemonInfo } from '@/utils';
 import state from './state';
 
 export default {
   get pokemonsInfo() {
-    return state.list.map(info => ({
-      id: info.id,
-      name: info.name,
-      types: info.types.map(({ type }) => type.name),
-      sprite: info.sprites.versions['generation-v']['black-white'].animated.front_default,
-    }));
+    return state.list.map(parsePokemonInfo);
   },
 };

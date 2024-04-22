@@ -94,7 +94,7 @@ export default {
       .type {
         padding: 0 8px;
         font-weight: bold;
-
+        border-radius: 8px;
         &:first-child {
           margin-right: 8px;
         }

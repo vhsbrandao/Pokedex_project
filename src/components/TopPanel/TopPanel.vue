@@ -7,24 +7,25 @@
 </template>
 
 <script>
+	import { mutations } from '@/store';
 	import TopPanelButton from './TopPanelButton.vue';
 
 	export default {
 		name: 'TopPanel',
-    props: ['button'],
 		components: {
 			TopPanelButton,
 		},
-      data(){
-        return {
-          buttons: [
-            { style: { width: '50px', height: '50px' }, class: 'bg--blue-00'},
-            { style: { width: '20px', height: '20px' }, class: 'bg--red-02' },
-					  { style: { width: '20px', height: '20px' }, class: 'bg--yellow' },
-					  { style: { width: '20px', height: '20px' }, class: 'bg--green' },
-          ],
-        };
-      },
+		props: ['button'],
+		data() {
+			return {
+				buttons: [
+					{ style: { width: '50px', height: '50px' }, class: 'bg--blue-00' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--red-02' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--yellow' },
+					{ style: { width: '20px', height: '20px' }, class: 'bg--green' },
+				],
+			};
+		},
 	};
 </script>
 
