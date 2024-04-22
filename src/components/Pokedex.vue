@@ -32,7 +32,7 @@
 		width: 100%;
 		max-width: 960px;
 		height: 100%;
-
+    border-radius: 8px;
 		@media (min-width: $viewport-medium) {
 			max-height: 700px;
 			flex-direction: row;
@@ -45,6 +45,7 @@
 			height: 50%;
 			perspective: 1700px;
 			transform-style: preserve-3d;
+      border-radius: 8px;
 
 			@media (min-width: $viewport-medium) {
 				height: 100%;

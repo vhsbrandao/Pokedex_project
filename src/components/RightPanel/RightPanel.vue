@@ -35,6 +35,7 @@
 		background-color: transparent;
 		top: 40px;
 		z-index: 1;
+    border-radius: 8px;
 
 		@media (min-width: $viewport-medium) {
 			width: calc(50% - 20px);
@@ -49,6 +50,7 @@
 			width: 100%;
 			height: 100%;
 			padding: 85px 20px 20px;
+      border-radius: 8px;
 			clip-path: polygon(270px 41px, 100% 41px, 100% 100%, 0 100%, 0 75px, 200px 75px);
 			transition: all 1.5s ease-in-out;
 			transform: translateY(calc(-100% - 40px)) rotateX(0deg);
@@ -64,7 +66,7 @@
 			.panel--front,
 			.panel--back {
 				transform: rotateX(-180deg) translateY(100%);
-
+        border-radius: 8px;
 				@media (min-width: $viewport-medium) {
 					transform: translateX(-100%) rotateY(180deg);
 				}
@@ -75,6 +77,7 @@
 			display: flex;
 			justify-content: center;
 			backface-visibility: hidden;
+      border-radius: 8px;
 			cursor: pointer;
 
 			@media (min-width: $viewport-medium) {
