@@ -7,7 +7,7 @@ export default {
       id: info.id,
       name: info.name,
       types: info.types.map(({ type }) => type.name),
-      sprite: info.sprites.front_shiny,
+      sprite: info.sprites.versions['generation-v']['black-white'].animated.front_default,
     }));
   },
 };

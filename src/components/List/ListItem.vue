@@ -55,6 +55,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 8px 4px;
+  margin: 24px;
 
   .informations {
     display: flex;
@@ -105,11 +106,6 @@ export default {
     width: 60px;
     height: 60px;
     margin-right: 4px;
-
-    @media (min-width: $viewport-medium) {
-      width: 80px;
-      height: 80px;
-    }
   }
 }
 </style>

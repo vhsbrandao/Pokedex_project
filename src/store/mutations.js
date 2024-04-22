@@ -1,51 +1,56 @@
 import state from './state';
 
 export default {
-	// incrementa o loading instanciado no state.js
-	updateOffset() {
-		state.offset += state.limit;
-	},
+  // Atualiza o deslocamento de carregamento da Pokédex
+  updateOffset() {
+    state.offset += state.limit;
+  },
+  // Adiciona Pokémon à Pokédex para o carregamento infinito
+  setList(list) {
+    state.list.push(...list);
+    state.tmpList.push(...list);
+  },
+  // Informa se a Pokédex precisa de mais dados
+  setListHasNext(flag) {
+    state.listHasNext = flag;
+  },
+  // Informa se a Pokédex terminou de buscar dados
+  setListHasCompleted(flag) {
+    state.listHasCompleted = flag;
+  },
+  // Informa se a Pokédex encontrou um erro
+  setListHasError(flag) {
+    state.listHasError = flag;
+  },
+  // Reseta a Pokédex para o último cache e remove as informações de busca
+  resetList() {
+    state.list = [...state.tmpList];
+    state.isPokemonSearch = false;
+    state.listHasError = false;
+    state.searchHasError = false;
+    state.pokemonId = null;
+  },
 
-	// Adiciona os pokemons na pokedex7
+  // Adiciona à Pokédex apenas o Pokémon pesquisado
+  setPokemonSearched(pokemon) {
+    state.list = [pokemon];
+  },
+  // Informa que a pesquisa está acontecendo
+  setIsSearching(flag) {
+    state.isSearching = flag;
+  },
+  // Informa que a pesquisa foi concluída
+  setIsPokemonSearch(flag) {
+    state.isPokemonSearch = flag;
+  },
+  // Informa que a pesquisa encontrou um erro
+  setSearchHasError(flag) {
+    state.searchHasError = flag;
+  },
 
-	setList(list) {
-		state.list.push(...list);
-		state.tmplist.push(...list);
-	},
-	// informa se pokedex  precisa de mais dados
-	setListHasNext(flag) {
-		state.listHasNext = flag;
-	},
-	// Se a pokedex terminou de buscar os dados
-	setListHasCompleted(flag) {
-		state.listHasCompleted = flag;
-	},
-	// informa se a pokedex teve algum erro
-	setListHasError(flag) {
-		state.listHasError = flag;
-	},
-
-	// reseta pokedex
-	resetList() {
-		state.list = [...state.tmplist];
-		state.isPokemonSearch = false;
-		state.listHasError = false;
-		state.searchHasError = false;
-	},
-
-	// informa que o search acontecendo
-	setIsSerching(flag) {
-		state.isSearching = flag;
-	},
-
-	// conclui search
-	setIsPokemonSearch(flag) {
-		state.isPokemonSearch = flag;
-	},
-
-	// Informa se o search teve algum erro
-	setSearchHasError(flag) {
-		state.searchHasError = flag;
-	},
-
+  // Seleciona Pokémon
+  setPokemonId(id = null) {
+    state.isPokemonSearch = false;
+    state.pokemonId = id;
+  },
 };

@@ -10,7 +10,7 @@
 <script>
 	import TopPanel from './TopPanel/TopPanel.vue';
 	import LeftPanel from './LeftPanel/LeftPanel.vue';
-  import Divider from './Divider/Divider.vue';
+	import Divider from './Divider/Divider.vue';
 	import RightPanel from './RightPanel/RightPanel.vue';
 
 	export default {
@@ -18,7 +18,7 @@
 		components: {
 			TopPanel,
 			LeftPanel,
-      Divider,
+			Divider,
 			RightPanel,
 		},
 	};
