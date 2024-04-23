@@ -1,9 +1,32 @@
 import PokeAPI from '@/services/pokeapi';
-
+import axios from 'axios';
 import state from './state';
 import mutations from './mutations';
 
 export default {
+
+  async getPokemonDetails(name) {
+    try {
+      // Obter os detalhes básicos do Pokémon
+      const pokemonDetails = await PokeAPI.getPokemonByName(name);
+
+      // Verificar se a propriedade 'evolution_chain' está presente nos detalhes do Pokémon
+      if (pokemonDetails.evolution_chain) {
+        // Fazer uma nova requisição para obter os detalhes completos da cadeia de evolução
+        const evolutionChainResponse = await axios.get(pokemonDetails.evolution_chain.url);
+        const evolutionChainDetails = evolutionChainResponse.data;
+
+        // Adicionar os detalhes da cadeia de evolução aos detalhes do Pokémon
+        pokemonDetails.evolutionChain = evolutionChainDetails;
+      }
+
+      return pokemonDetails;
+    } catch (error) {
+      console.error('Erro ao obter detalhes do Pokémon:', error);
+      throw error;
+    }
+  },
+
 	async getPokemons() {
 		const {
 			setList,

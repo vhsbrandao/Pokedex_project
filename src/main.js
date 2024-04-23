@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import InfiniteLoading from 'vue-infinite-loading';
 
-import './styles/main.scss';
+import App from './App.vue'
 
-import App from './App.vue';
+import './styles/main.scss';
 
 Vue.config.productionTip = false;
 

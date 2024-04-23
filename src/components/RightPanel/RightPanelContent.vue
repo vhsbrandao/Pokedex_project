@@ -2,6 +2,7 @@
   <div class="search">
     <label for="search" class="search__label text--white bg--black">
       <h3 class="search__label--text">Who's that Pokémon?</h3>
+      <p>Ex. "Charizard" or "6"</p>
       <input id="search" v-model.trim="name" type="text" class="search__input" @keyup.enter="searchPokemon">
     </label>
 
@@ -12,6 +13,9 @@
       <button class="btn btn--search bg--black-button text--white" @click.prevent="searchPokemon">
         Search
       </button>
+      <!-- <button class="btn btn--lang bg--black-button text--white" @click.prevent="showRandomPokemon">
+          Mudar Idioma
+      </button> -->
     </div>
   </div>
 </template>
@@ -99,9 +103,11 @@ export default {
         padding: 15px;
         border: 4px solid color(black);
 
-        @media (min-width: $viewport-medium) {
-
-        }
+      }
+      &--lang {
+        width: 30%;
+        padding: 15px;
+        border: 4px solid color(black);
       }
     }
   }

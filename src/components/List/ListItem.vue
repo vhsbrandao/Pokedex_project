@@ -6,6 +6,10 @@
         <span class="id">#{{ id }}</span>
         <span class="name">{{ name }}</span>
       </h3>
+       <div class="pokemon-item">
+    <!-- Exibir cada sprite -->
+    <img v-for="(sprite, key) in sprites" :key="key" :src="sprite" :alt="key" class="pokemon-sprite" />
+  </div>
       <div class="types">
         <span v-for="type in types" :key="type" :class="`bg--${type}`" class="type text--black">
           {{ type }}
@@ -45,6 +49,7 @@ export default {
     selectPokemon() {
       mutations.setPokemonId(this.id);
     },
+
   },
 };
 </script>
