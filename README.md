@@ -1,23 +1,31 @@
 
-## Project setup
-You'll need to install Node.js 16 to run this project or edit/remove .npmrc and engines property on package.json to use another version
+Pokédex
 
-First, install dependencies:
+
+
+Descrição
+Este é um projeto de Pokédex desenvolvido utilizando Vue.js, que permite aos usuários explorar informações sobre diferentes Pokémon. O projeto utiliza a API PokeAPI para obter dados detalhados sobre os Pokémon, incluindo seus tipos, habilidades, estatísticas e sprites.
+
+
+## Configuração do Projeto
+Você precisará instalar o Node.js 16 para executar este projeto ou editar/remover o arquivo .npmrc e a propriedade engines no package.json para usar outra versão.
+
+Primeiro, instale as dependências:
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compila e recarrega automaticamente para desenvolvimento
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compila e minimiza para produção
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Lint e corrige arquivos
 ```
 yarn lint
 ```
